@@ -12,7 +12,7 @@ Yeh ek **simple Vanilla JavaScript CRUD application** hai jo **Tasks (To-Do List
 - **Update**: Edit button se modify.
 - **Delete**: Delete button se hatao.
 
-**Demo Live**: [GitHub Pages Link yahan daalo jab deploy karo](https://yourusername.github.io/repo-name/) 🎉
+**Demo Live**: [https://github.com/Jitendrachaudhari1234/Task_Crud.git) 🎉
 
 ## 🚀 **Features**
 - ✅ **Add Task**: Input mein type → Save.
@@ -33,10 +33,9 @@ Yeh ek **simple Vanilla JavaScript CRUD application** hai jo **Tasks (To-Do List
 
 ## 📱 **Screenshots**
 ### Home Page (Empty)
-![Home Empty](screenshots/home-empty.png) *(Screenshot add karo: PrtSc → Paint → Save)*
-
+![Home Empty](screenshots/image.png) 
 ### Tasks Added + Edit/Delete
-![Tasks List](screenshots/tasks-list.png)
+![Tasks List](screenshots/image.png)
 
 ### Demo GIF
 *(Record browser: Loom/ScreenToGif)*
