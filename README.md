@@ -4,20 +4,20 @@
 [![Vanilla JS](https://img.shields.io/badge/Vanilla-JS-blue.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ## ✨ **Project Description**
-Yeh ek **simple Vanilla JavaScript CRUD application** hai jo **Tasks (To-Do List)** manage karta hai. Koi backend ya framework nahi – **pure browser mein chalti hai** (Local Storage future mein add kar sakte ho). 
+This is a **simple Vanilla JavaScript CRUD application** that manages **Tasks (To-Do List)**. No backend or framework – **runs purely in the browser** (Local Storage can be added in future). 
 
 **CRUD Operations**:
-- **Create**: Naya task add karo.
-- **Read**: Sab tasks table mein dikhao.
-- **Update**: Edit button se modify.
-- **Delete**: Delete button se hatao.
+- **Create**: Add a new task.
+- **Read**: Display all tasks in a table.
+- **Update**: Modify with Edit button.
+- **Delete**: Remove with Delete button.
 
-**Demo Live**: [https://github.com/Jitendrachaudhari1234/Task_Crud.git) 🎉
+**Demo Live**: [https://github.com/Jitendrachaudhari1234/Task_Crud](https://github.com/Jitendrachaudhari1234/Task_Crud) 🎉
 
 ## 🚀 **Features**
-- ✅ **Add Task**: Input mein type → Save.
+- ✅ **Add Task**: Type in input → Save.
 - ✅ **View All Tasks**: Auto table update.
-- ✅ **Edit Task**: Click Edit → Input fill → Save.
+- ✅ **Edit Task**: Click Edit → Input fills → Save.
 - ✅ **Delete Task**: Click Delete → Gone!
 - ✅ **Responsive Design**: Mobile-friendly CSS.
 - ✅ **No Dependencies**: Pure HTML/CSS/JS.
@@ -34,6 +34,7 @@ Yeh ek **simple Vanilla JavaScript CRUD application** hai jo **Tasks (To-Do List
 ## 📱 **Screenshots**
 ### Home Page (Empty)
 ![Home Empty](screenshots/image.png) 
+
 ### Tasks Added + Edit/Delete
 ![Tasks List](screenshots/image.png)
 
@@ -44,5 +45,5 @@ Yeh ek **simple Vanilla JavaScript CRUD application** hai jo **Tasks (To-Do List
 ## 🎮 **How to Run (Super Easy!)**
 1. **Download/Clone**:
    ```bash
-   git clone https://github.com/yourusername/js-crud-todo.git
-   cd js-crud-todo
+   git clone https://github.com/Jitendrachaudhari1234/Task_Crud.git
+   cd Task_Crud
