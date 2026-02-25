@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript CRUD Mini Project</title>
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #999;
+    }
+    input {
+      padding: 8px;
+      width: 70%;
+      margin-right: 10px;
+    }
+    button {
+    background-color: green;
+      padding: 8px 12px;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      
+    }
+    table, th, td {
+    
+      border: 2px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background: #333;
+      color: #fff;
+    }
+    .btn-edit {
+      background: blue;
+      color: white;
+      border: none;
+    }
+    .btn-delete {
+      background: red;
+      color: white;
+      border: none;
+    } 
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>JavaScript CRUD Mini Project (Tasks)</h2>
+
+    <!-- Input + Button -->
+    <input type="text" id="taskInput" placeholder="Enter task...">
+    <button onclick="addOrUpdateTask()">Save Task</button>
+
+    <!-- Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>NO</th>
+          <th>Task</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="taskTableBody"></tbody>
+    </table>
+  </div>
+
+  <script>
+    let tasks = [];      // Array me data store hoga
+    let editIndex = null; // Edit karte time index store hoga
+
+    // Create / Update
+    function addOrUpdateTask() {
+      const input = document.getElementById("taskInput");
+      const taskText = input.value.trim();
+
+      if (!taskText) {
+        alert("Please enter a task!");
+        return;
+      }
+
+      if (editIndex === null) {
+        // CREATE: naya task add karo
+        tasks.push(taskText);
+      } else {
+        // UPDATE: purana task replace karo
+        tasks[editIndex] = taskText;
+        editIndex = null;
+      }
+
+      input.value = "";
+      renderTasks();
+    }
+
+    // READ: Table me tasks dikhana
+    function renderTasks() {
+      const tbody = document.getElementById("taskTableBody");
+      tbody.innerHTML = "";
+
+      tasks.forEach((task, index) => {
+        tbody.innerHTML += `
+          <tr>
+            <td>${index + 1}</td>
+            <td>${task}</td>
+            <td>
+              <button class="btn-edit" onclick="editTask(${index})">Edit</button>
+              <button class="btn-delete" onclick="deleteTask(${index})">Delete</button>
+            </td>
+          </tr>
+        `;
+      });
+    }
+
+    // UPDATE: Edit task
+    function editTask(index) {
+      const input = document.getElementById("taskInput");
+      input.value = tasks[index];
+      editIndex = index;
+    }
+
+    // DELETE: Remove task
+    function deleteTask(index) {
+      tasks.splice(index, 1); // index se 1 item hatao
+      renderTasks();
+    }
+  </script>
+</body>
+</html>
